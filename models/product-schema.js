@@ -11,6 +11,7 @@ const productSchema = new Schema({
     height: Number,
   },
   weight: { type: String, required: true },
+  description:{type:String, required: true}
 });
 
 module.exports = mongoose.model('Product', productSchema);

@@ -13,13 +13,13 @@ router.get("/:productId", productsControllers.getProductById);
 
 router.post(
   "/",
-  [check("name").not().isEmpty()],
+  [check("name").not().isEmpty(), check("imageUrl").not().isEmpty(),check("description").not().isEmpty()],
   productsControllers.createProduct
 );
 
 router.patch(
   "/:productId",
-  [check("name").not().isEmpty()],
+  [check("name").not().isEmpty(), check("description").not().isEmpty()],
   productsControllers.updateProduct
 );
 
